@@ -82,6 +82,7 @@ class RabbitMQQueue extends Queue implements QueueContract
 				'Content-Type'  => 'application/json',
 				'delivery_mode' => 2,
 			]);
+            $message->set('priority', $this->configQueue['priority']);
 
 			// push task to a queue
 			$this->channel->basic_publish($message, $queue, $queue);
@@ -178,7 +179,11 @@ class RabbitMQQueue extends Queue implements QueueContract
 				$this->configQueue['passive'],
 				$this->configQueue['durable'],
 				$this->configQueue['exclusive'],
-				$this->configQueue['auto_delete']
+				$this->configQueue['auto_delete'],
+                false,
+                new AMQPTable([
+                    'x-max-priority' => $this->configQueue['max_priority']
+                ])
 			);
 
 			// bind queue to the exchange
@@ -219,6 +224,7 @@ class RabbitMQQueue extends Queue implements QueueContract
 				'x-dead-letter-exchange'    => $destination,
 				'x-dead-letter-routing-key' => $destination,
 				'x-message-ttl'             => $delay * 1000,
+                'x-max-priority' => $this->configQueue['max_priority']
 			])
 		);
 
