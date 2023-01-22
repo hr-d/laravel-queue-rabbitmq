@@ -1,6 +1,6 @@
 {
-  "name": "vladimir-yuldashev/laravel-queue-rabbitmq",
-  "version": "5.2",
+  "name": "hr-d/laravel-queue-rabbitmq",
+  "version": "5.2.1",
   "description": "RabbitMQ driver for Laravel Queue",
   "license": "MIT",
   "authors": [
