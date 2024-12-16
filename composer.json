@@ -30,7 +30,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "HRD\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
+      "VladimirYuldashev\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -39,7 +39,7 @@
     },
     "laravel": {
       "providers": [
-        "HRD\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
+        "VladimirYuldashev\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
       ]
     }
   },
