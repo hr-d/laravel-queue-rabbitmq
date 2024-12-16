@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "HRD\\LaravelQueueRabbitMQ\\": "src/"
+      "VladimirYuldashev\\LaravelQueueRabbitMQ\\": "src/"
     }
   },
   "autoload-dev": {
