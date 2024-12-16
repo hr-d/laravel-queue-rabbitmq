@@ -85,6 +85,10 @@ class RabbitMQQueue extends Queue implements QueueContract
                 $message->setProperties($options['properties']);
             }
 
+            if (isset($this->queueOptions['priority'])) {
+                $message->setPriority($this->queueOptions['priority']);
+            }
+
             if (isset($options['attempts'])) {
                 $message->setProperty(RabbitMQJob::ATTEMPT_COUNT_HEADERS_KEY, $options['attempts']);
             }

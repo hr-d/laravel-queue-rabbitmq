@@ -1,5 +1,6 @@
 {
-  "name": "vladimir-yuldashev/laravel-queue-rabbitmq",
+  "name": "hr-d/laravel-queue-rabbitmq",
+  "version": "7.5.1",
   "description": "RabbitMQ driver for Laravel Queue",
   "license": "MIT",
   "authors": [
@@ -24,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "VladimirYuldashev\\LaravelQueueRabbitMQ\\": "src/"
+      "HRD\\LaravelQueueRabbitMQ\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "VladimirYuldashev\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
+      "HRD\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -38,7 +39,7 @@
     },
     "laravel": {
       "providers": [
-        "VladimirYuldashev\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
+        "HRD\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
       ]
     }
   },
